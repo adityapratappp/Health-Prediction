@@ -12,11 +12,11 @@ st.set_page_config(page_title="Disease Prediction App", page_icon="🏥", layout
 
 # Load the models
 try:
-    with open("./models/heart_disease_model.pkl", "rb") as file:
+    with open("./heart_disease_model.pkl", "rb") as file:
         heart_model = pickle.load(file)
-    with open("./models/stroke_model.pkl", "rb") as file:
+    with open("./stroke_model.pkl", "rb") as file:
         stroke_model = pickle.load(file)
-    with open("./models/thyroid_disease_model.pkl", "rb") as file:
+    with open("./thyroid_disease_model.pkl", "rb") as file:
         thyroid_model = pickle.load(file)
 except FileNotFoundError:
     st.error("Model files not found. Please ensure 'heart_disease_model.pkl', 'stroke_model.pkl', and 'thyroid_disease_model.pkl' are in the models directory.")
